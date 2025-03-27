@@ -32,17 +32,17 @@ class Job extends Model
 
     public function languages()
     {
-        return $this->hasMany(Language::class);
+        return $this->belongsToMany(Language::class);
     }
 
     public function locations()
     {
-        return $this->hasMany(Location::class);
+        return $this->belongsToMany(Location::class);
     }
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 
     public function attributes()
