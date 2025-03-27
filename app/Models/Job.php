@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Category;
 use App\Models\Language;
 use App\Models\Location;
+use App\Models\JobAttributeValue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -42,5 +43,10 @@ class Job extends Model
     public function categories()
     {
         return $this->hasMany(Category::class);
+    }
+
+    public function attributes()
+    {
+        return $this->hasMany(JobAttributeValue::class);
     }
 }
